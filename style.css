@@ -20,9 +20,37 @@ body {
   background-image: url('./images/Accueil/fond.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   min-height: 100vh;
   width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+.centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aligner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aligner-centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Navbar */
@@ -207,4 +235,94 @@ header.sticky .menu.responsive {
 .toggle-menu.stickyM::after {
   background-color: black;
 }
+}
+
+/* Accueil */
+
+#accueil {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#accueil h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+#accueil span  {
+  margin-left: 20px;
+}
+
+#accueil p {
+  color: white;
+  font-family: 'Roboto Serif', serif;
+  font-size: 1.5rem;
+}
+
+#accueil button {
+  width: 150px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid white;
+}
+
+#accueil button a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Lobster', cursive;
+  font-size: 18px;
+}
+
+#accueil button:hover {
+  background-color: black;
+}
+
+#accueil button:hover a {
+  color: white;
+}
+
+#accueil .arrow span {
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  transform: rotate(45deg);
+  margin: 0px;
+  animation: scroll 4s infinite;
+  cursor: pointer;
+}
+
+#accueil .arrow  span:nth-child(2){
+  animation-delay: -.2s;
+}
+
+#accueil .arrow  span:nth-child(3){
+  animation-delay: -.4s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@media (max-width:576px) {
+  #accueil h1 {
+    font-size: 3rem;
+  }
+  #accueil p {
+    font-size: 1.1rem;
+  }
 }
