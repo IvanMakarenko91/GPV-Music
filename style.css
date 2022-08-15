@@ -53,6 +53,18 @@ h1 {
   flex-direction: column;
 }
 
+.number {
+  font-family: 'Roboto Serif', serif;
+}
+
+.roboto {
+  font-family: 'Roboto Serif', serif;
+}
+
+.lobster {
+  font-family: 'Lobster', cursive;
+}
+
 /* Navbar */
 
 header {
@@ -200,8 +212,7 @@ header .menu {
     transform: translateY(0) rotate(0deg);
 } 
 header .menu.responsive {
-  padding: 0;
-    display: flex;
+    padding: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -240,7 +251,7 @@ header.sticky .menu.responsive {
 /* Accueil */
 
 #accueil {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,6 +280,9 @@ header.sticky .menu.responsive {
 }
 
 #accueil button a {
+  width: 150px;
+  padding: 10px;
+  border-radius: 30px;
   text-decoration: none;
   color: black;
   font-family: 'Lobster', cursive;
@@ -291,6 +305,11 @@ header.sticky .menu.responsive {
   transform: rotate(45deg);
   margin: 0px;
   animation: scroll 4s infinite;
+}
+
+#accueil .arrow span a {
+  opacity: 0;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -324,5 +343,80 @@ header.sticky .menu.responsive {
   }
   #accueil p {
     font-size: 1.1rem;
+  }
+}
+
+
+/* À propos */
+
+#propos {
+  position: relative;
+  background-color: #d3d3d3;
+}
+
+#propos h1 {
+  display: flex;
+  justify-content: end;
+  margin-top: 150px;
+  font-size: 4rem;
+  color: black;
+  position: relative;
+}
+
+#propos p {
+  font-size: 18px;
+}
+
+.numberOne {
+  position: absolute;
+  right: 25%;
+  top: 8%;
+  font-size: 6rem;
+  color: #9b9b9b;
+}
+
+.musique {
+  position: absolute;
+  height: 400px;
+  width: 800px;
+  left: 0;
+  top:11%;
+}
+
+.piano {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  bottom: 40px;
+  left: 10%;
+}
+
+@media (max-width:1399px) {
+  .musique {
+    width: 100%;
+    opacity: 0.1;
+  }
+}
+
+@media (max-width:1199px) {
+  .piano {
+    height: 300px;
+    width: 300px;
+    left: 2%;
+  }
+}
+
+@media (max-width:991px) {
+  .piano {
+    display: none;
+  }
+}
+
+@media (max-width:575px) {
+  #propos h1 {
+    justify-content: center;
+  }
+  .musique {
+    height: 300px;
   }
 }
