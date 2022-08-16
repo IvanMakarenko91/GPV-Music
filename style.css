@@ -656,9 +656,151 @@ header.sticky .menu.responsive {
 @media (max-width:575px) {
   #programme h1 {
     font-size: 3rem;
-  }
-
-  #programme h1 {
     justify-content: center;
+  }
+}
+
+
+/* Professeurs */
+
+#professeurs {
+  position: relative;
+  background-color: #dfdfdf;
+}
+
+#professeurs h1 {
+  display: flex;
+  justify-content: start;
+  margin-top: 150px;
+  font-size: 4rem;
+  color: black;
+  position: relative;
+}
+
+.numberFour {
+  position: absolute;
+  left: 25%;
+  top: 70px;
+  font-size: 6rem;
+  color: #9b9b9b;
+}
+
+.profs {
+  min-height: 50vh;
+  max-width: 1000px;
+}
+
+.profs img {
+  width: 300px;
+  height: 200px;
+}
+
+.profs .largeur {
+  width: 300px;
+  position: relative;
+}
+
+.photo-profs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social a {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5 ease;
+  text-align: center;
+}
+.social a:hover{
+  color: #f3f3f3;
+  background-color: rgb(0, 0, 0);
+}
+
+#professeurs .note {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  right: 0;
+  top: 0%;
+}
+
+.real-overlay {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(45deg,rgba(0, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.real-overlay > * {
+  transform: translateY(-50px);
+  transition: transform 0.25s;
+}
+
+.real-overlay:hover {
+  opacity: 1;
+}
+
+.real-overlay:hover > * {
+  transform: translateY(0);
+}
+
+.real-titre {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.real-description {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width:1200px) {
+  #professeurs .note {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width:991px) {
+  #professeurs .note {
+    width: 100%;
+  }
+}
+
+@media (max-width:575px) {
+  #professeurs h1 {
+    font-size: 3rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width:400px) {
+  .profs .largeur, .profs img {
+    width: 100%;
+  }
+  .real-overlay {
+    display: none;
   }
 }
