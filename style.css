@@ -8,7 +8,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: all 0.5s;
 }
 
 body {
@@ -77,6 +76,7 @@ header {
   font-family: 'Lobster', cursive;
   width: 100%;
   z-index: 3;
+  transition: all 0.5s;
 }
 header .logo {
   color: rgb(255, 255, 255);
@@ -223,6 +223,7 @@ header .menu.responsive {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: all 0.5s;
 }
 header .menu.responsive li {
     margin: 25px 0;
@@ -529,11 +530,135 @@ header.sticky .menu.responsive {
   }
 }
 
-@media (max-width:499px) {
+@media (max-width:575px) {
   #instruments h1 {
     font-size: 3rem;
   }
   #instruments .instru-guitare {
     width: 220px;
+  }
+  #instruments h1 {
+    justify-content: center;
+  }
+}
+
+
+/* programme */
+
+#programme {
+  position: relative;
+  background-color: #d3d3d3;
+}
+
+#programme h6 {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#programme h1 {
+  display: flex;
+  justify-content: end;
+  margin-top: 150px;
+  font-size: 4rem;
+  color: black;
+  position: relative;
+}
+
+.numberThree {
+  position: absolute;
+  right: 25%;
+  top: 80px;
+  font-size: 6rem;
+  color: #9b9b9b;
+}
+
+
+#programme .programme-groupe {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  top: 150px;
+  left: 0;
+}
+
+.quote-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 600px;
+  cursor: pointer;
+  background-color: #bbbbbb;
+  padding: 10px 20px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.quote-container img {
+  transition: transform 0.5s;
+}
+
+.plusIcon {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.choix {
+  margin-bottom: 0;
+  color: rgb(0, 0, 0);
+}
+
+.rotate {
+  transform: rotate(45deg);
+}
+
+.appart {
+  width: 600px;
+  padding: 0;
+  display: none;
+  height: 0px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.apparition {
+  width: 600px;
+  padding: 0;
+  background-color: #d4d3d3;
+  display: block;
+  height: calc(100% - 70px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.jams {
+  font-size: 18px;
+}
+
+@media (max-width:1199px) {
+  #programme .programme-groupe {
+    opacity: 0.1;
+    width: 90%;
+  }
+}
+
+@media (max-width:640px) {
+  .appart, .quote-container, .apparition {
+    width: 95%;
+  }
+}
+
+@media (max-width:575px) {
+  #programme h1 {
+    font-size: 3rem;
+  }
+
+  #programme h1 {
+    justify-content: center;
   }
 }

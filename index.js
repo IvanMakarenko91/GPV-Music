@@ -22,3 +22,20 @@ menuA[i].addEventListener('click', () => {
   toggle_menu.classList.remove('active') ;
 })
 }
+
+// Slide Toggle Down
+
+var quoteContainer = document.querySelectorAll(".quote-container");
+var down = document.getElementsByClassName("plusIcon");
+var appart = document.querySelectorAll(".appart");
+
+function enleverActiveImages() {
+  for(let i = 0; i < quoteContainer.length; i++) {
+    quoteContainer[i].addEventListener('click', () => {
+      down[i].classList.toggle("rotate");
+      appart[i].classList.toggle("apparition");
+    })
+  }
+}
+
+enleverActiveImages();
