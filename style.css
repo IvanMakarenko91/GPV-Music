@@ -258,6 +258,21 @@ header.sticky .menu.responsive {
   align-items: center;
 }
 
+.num {
+  color: white;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+}
+
+.diplome {
+  position: absolute;
+  left: 230px;
+  bottom: 90px;
+  width: 75px;
+  height: 75px;
+}
+
 #accueil h1 {
   color: white;
   font-size: 4rem;
@@ -273,14 +288,15 @@ header.sticky .menu.responsive {
   font-size: 1.5rem;
 }
 
-#accueil button {
+#accueil button, #ecole button {
   width: 150px;
   padding: 10px;
   border-radius: 30px;
   border: 1px solid white;
+  transition: all 0.3s;
 }
 
-#accueil button a {
+#accueil button a, #ecole button a {
   width: 150px;
   padding: 10px;
   border-radius: 30px;
@@ -290,11 +306,11 @@ header.sticky .menu.responsive {
   font-size: 18px;
 }
 
-#accueil button:hover {
+#accueil button:hover, #ecole button:hover {
   background-color: black;
 }
 
-#accueil button:hover a {
+#accueil button:hover a, #ecole button:hover a {
   color: white;
 }
 
@@ -335,6 +351,18 @@ header.sticky .menu.responsive {
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@media (max-width:767px) {
+  .num {
+    left: 10px;
+    bottom: 100px;
+  }
+  
+  .diplome {
+    left: 50px;
+    bottom: 20px;
   }
 }
 
@@ -640,7 +668,7 @@ header.sticky .menu.responsive {
   font-size: 18px;
 }
 
-@media (max-width:1199px) {
+@media (max-width:1399px) {
   #programme .programme-groupe {
     opacity: 0.1;
     width: 90%;
@@ -777,7 +805,7 @@ header.sticky .menu.responsive {
   margin-top: 0.25rem;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1399px) {
   #professeurs .note {
     opacity: 0.1;
   }
@@ -802,5 +830,135 @@ header.sticky .menu.responsive {
   }
   .real-overlay {
     display: none;
+  }
+}
+
+
+/* Ecole */
+
+#ecole {
+  position: relative;
+  background-color: #d3d3d3;
+}
+
+#ecole h1 {
+  display: flex;
+  justify-content: end;
+  margin-top: 150px;
+  font-size: 4rem;
+  color: black;
+  position: relative;
+}
+
+.numberFive {
+  position: absolute;
+  right: 25%;
+  top: 80px;
+  font-size: 6rem;
+  color: #9b9b9b;
+}
+
+.progress, .progress2, .progress3, .progress4 {
+  position: relative;
+  width: 400px;
+  height: 30px;
+  background: #c2482a80;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background: #8b1c00;
+  transition: ease-in-out 2s;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  font: bold 14px "Quicksand", sans-serif;
+  color: #ffffff;
+}
+
+.realisation h3 {
+  color: #000000;
+  position: relative;
+}
+
+.realisation h3::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  height: 5px;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+.realisation p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #494949;
+}
+
+.essai {
+  margin-top: 75px;
+}
+
+.certificat2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 10%;
+  bottom: 200px;
+}
+
+.certificat3 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  left: 10%;
+  bottom: 200px;
+}
+
+.parchemin {
+  position: absolute;
+  width: 800px;
+  height: 200px;
+  top: 10%;
+}
+
+@media (max-width:1399px) {
+  #ecole .parchemin {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width:1199px) {
+  .certificat2, .certificat3 {
+    display: none;
+  }
+}
+
+@media (max-width:991px) {
+  #ecole .parchemin {
+    width: 96%;
+    left: 2%;
+  }
+}
+
+@media (max-width:575px) {
+  #ecole h1 {
+    font-size: 3rem;
+    justify-content: center;
+  }
+  
+  .progress, .progress2, .progress3, .progress4 {
+    width: 80%;
   }
 }
