@@ -1059,3 +1059,91 @@ button[type="submit"]:hover {
   left: 1rem;
 }
 
+
+/* Footer */
+footer {
+  background-image: url('./images/Footer/footer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 30vh;
+  padding: 70px;
+}
+
+footer .container {
+  margin: auto;
+}
+footer ul {
+  list-style: none;
+}
+
+footer h4 {
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  padding-left: 10px;
+}
+
+footer h4::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+  background-color: rgb(255, 255, 255);
+  height: 2px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 250px;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  transition: all 0.2s ease;
+  padding-left: 10px;
+}
+
+footer ul li a:hover{
+  color: black;
+  text-decoration: none;
+  background-color: white;
+}
+
+.reseau {
+  padding-left: 10px;
+}
+
+.reseau a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  transition: all 0.5 ease;
+}
+.reseau a:hover{
+  color: #24262b;
+  background-color: white;
+}
+
+@media (max-width:767px) {
+  footer {
+    padding: 30px;
+  }
+}
