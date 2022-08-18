@@ -962,3 +962,100 @@ header.sticky .menu.responsive {
     width: 80%;
   }
 }
+
+
+/* Contact */
+
+#contact {
+  position: relative;
+  background-color: #dfdfdf;
+}
+
+#contact h1 {
+  display: flex;
+  justify-content: start;
+  margin-top: 150px;
+  font-size: 4rem;
+  color: black;
+  position: relative;
+}
+
+.numberSix {
+  position: absolute;
+  left: 25%;
+  top: 70px;
+  font-size: 6rem;
+  color: #9b9b9b;
+}
+
+@media (max-width:575px) {
+  #contact h1 {
+    font-size: 3rem;
+    justify-content: center;
+  }
+}
+
+/* Formulaire de contact */
+form {
+  border: 1px solid black;
+  max-width: 800px;
+}
+
+input {
+  padding: 8px 0px;
+  border-radius: 0px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+button[type="submit"] {
+  width: 200px;
+  background-color: rgb(202 141 126);
+  border: 1px solid rgba(0, 0, 0);
+  transition: all 0.2s;
+  color: white;
+} 
+
+button[type="submit"]:hover {
+  background-color: rgb(139 28 0);
+}
+
+
+/* Slider */
+.slider {
+  height: 50vh;
+  position: relative;
+}
+
+.slider img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.slider img.activer {
+  opacity: 1;
+}
+
+.suivant, .precedent {
+  color: white;
+  position: absolute;
+  font-size: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.suivant {
+  right: 1rem;
+}
+
+.precedent {
+  left: 1rem;
+}
+
